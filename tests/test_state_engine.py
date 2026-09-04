@@ -1,8 +1,7 @@
 import pytest
 import asyncio
-from backend.src.state import FleetState
-from backend.src.connection_mgr import ConnectionManager
-
+from state import FleetState
+from connection_mgr import ConnectionManager
 @pytest.mark.asyncio
 async def test_out_of_order_telemetry_rejection():
     """
