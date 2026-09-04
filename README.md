@@ -93,7 +93,13 @@ The test suite in `tests/test_state_engine.py` covers:
 2. **Concurrent State & Polling Race Condition:** Simulates all 8 robots blasting updates concurrently while multiple REST clients request snapshots, ensuring thread safety and no partial writes.
 3. **Dead WebSocket Client Pruning:** Verifies that an abruptly closed or failed socket does not crash or block the fanout loop for remaining healthy clients.
 
-Run the tests locally:
+Run the tests using docker:
+
+```bash
+docker compose exec backend pytest
+```
+
+Run the tests locally (requires python):
 
 ```bash
 pytest
