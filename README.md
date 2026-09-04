@@ -25,10 +25,22 @@ docker compose up --build
 Retrieve the latest state of all 8 robots:
 
 ```bash
+curl -s http://localhost:8000/robots
+```
+
+or (jq is used for formatting the output in terminal and has to be installed using ```winget install jqlang.jq```)
+
+```bash
 curl -s http://localhost:8000/robots | jq
 ```
 
 Or query an individual robot:
+
+```bash
+curl -s http://localhost:8000/robots/r1
+```
+
+or (jq is used for formatting the output in terminal and has to be installed using ```winget install jqlang.jq```)
 
 ```bash
 curl -s http://localhost:8000/robots/r1 | jq
