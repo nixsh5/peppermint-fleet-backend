@@ -99,7 +99,7 @@ Run the tests using docker:
 docker compose exec backend pytest
 ```
 
-Run the tests locally (requires python):
+Run the tests locally (requires python installed):
 
 ```bash
 pytest
